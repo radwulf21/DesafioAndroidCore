@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login"
+    tools:context=".LoginActivity"
     android:padding="20dp">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -47,6 +47,6 @@
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:background="@color/gray"/>
+        android:background="@color/gray"
+        android:text="Register" />
 </LinearLayout>
