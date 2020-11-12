@@ -1,8 +1,9 @@
-package com.example.desafioandroidcore
+package com.example.desafioandroidcore.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.desafioandroidcore.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

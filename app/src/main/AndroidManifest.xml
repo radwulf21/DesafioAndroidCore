@@ -9,9 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioAndroidCore">
-
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity" />
-
+        <activity android:name=".ui.LoginActivity" />
         <activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".LoginActivity"
+            android:name=".ui.RegisterActivity"
+            android:parentActivityName=".ui.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.HomeActivity" />
     </application>
 
 </manifest>
