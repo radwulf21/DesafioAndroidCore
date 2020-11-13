@@ -8,11 +8,27 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafioandroidcore.R
 import com.example.desafioandroidcore.domain.Prato
+import com.example.desafioandroidcore.ui.activities.CardapioActivity
 
-class PratosAdapter(private val listPratos: ArrayList<Prato>): RecyclerView.Adapter<PratosAdapter.PratosViewHolder>() {
-    class PratosViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class PratosAdapter(private val listPratos: ArrayList<Prato>, var listener: OnClickPratoListener): RecyclerView.Adapter<PratosAdapter.PratosViewHolder>() {
+    inner class PratosViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var iv_prato: ImageView = itemView.findViewById(R.id.iv_prato)
         var tv_nome_prato: TextView = itemView.findViewById(R.id.tv_nome_prato)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onClickPrato(position)
+            }
+        }
+    }
+
+    interface OnClickPratoListener {
+        fun onClickPrato(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PratosViewHolder {

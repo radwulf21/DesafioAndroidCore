@@ -27,6 +27,10 @@
         <activity
             android:name=".ui.activities.CardapioActivity"
             android:parentActivityName=".ui.activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.DetalhesPratoActivity"
+            android:parentActivityName=".ui.activities.CardapioActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
