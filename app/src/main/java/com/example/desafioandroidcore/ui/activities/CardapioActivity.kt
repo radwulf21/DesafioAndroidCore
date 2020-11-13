@@ -2,6 +2,7 @@ package com.example.desafioandroidcore.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.desafioandroidcore.R
 import com.example.desafioandroidcore.domain.Prato
@@ -26,7 +27,7 @@ class CardapioActivity : AppCompatActivity() {
         tv_nome_restaurant.text = nomeRestaurante
 
         rv_pratos.adapter = adapter
-        rv_pratos.layoutManager = LinearLayoutManager(this)
+        rv_pratos.layoutManager = GridLayoutManager(this, 2)
         rv_pratos.setHasFixedSize(true)
     }
 }
