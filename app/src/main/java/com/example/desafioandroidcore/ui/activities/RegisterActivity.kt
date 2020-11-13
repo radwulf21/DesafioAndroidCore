@@ -1,5 +1,6 @@
-package com.example.desafioandroidcore.ui
+package com.example.desafioandroidcore.ui.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.desafioandroidcore.R
@@ -11,5 +12,14 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         setSupportActionBar(toolbar_register)
+
+        btn_register2.setOnClickListener {
+            callHomeActivity()
+        }
+    }
+
+    fun callHomeActivity() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
     }
 }

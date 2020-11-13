@@ -1,3 +1,3 @@
 package com.example.desafioandroidcore.domain
 
-data class Restaurant(var nome: String, var endereco: String, var horarioFechamento: String)
+data class Restaurant(val id: Int, var img: Int, var nome: String, var endereco: String, var horarioFechamento: String)

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_background"
-    tools:context=".ui.HomeActivity">
+    tools:context=".ui.activities.HomeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_restaurants"

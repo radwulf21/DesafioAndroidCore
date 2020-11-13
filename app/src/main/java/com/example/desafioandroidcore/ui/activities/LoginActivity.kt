@@ -1,4 +1,4 @@
-package com.example.desafioandroidcore.ui
+package com.example.desafioandroidcore.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,10 +14,19 @@ class LoginActivity : AppCompatActivity() {
         btn_register.setOnClickListener {
             callRegisterActivity()
         }
+
+        btn_login.setOnClickListener {
+            callHomeActivity()
+        }
     }
 
     fun callRegisterActivity() {
         val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun callHomeActivity() {
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.desafioandroidcore.ui
+package com.example.desafioandroidcore.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

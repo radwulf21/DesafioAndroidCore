@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.RegisterActivity" >
+    tools:context=".ui.activities.RegisterActivity" >
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -73,7 +73,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_register2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/red"
