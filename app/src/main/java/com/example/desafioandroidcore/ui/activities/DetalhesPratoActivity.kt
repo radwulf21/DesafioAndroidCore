@@ -11,8 +11,6 @@ class DetalhesPratoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_prato)
 
-        setSupportActionBar(toolbar_detalhes_prato)
-
         val imgPrato = intent.getSerializableExtra("imgPrato") as? Int
         val nomePrato = intent.getSerializableExtra("nomePrato") as? String
         val descricaoPrato = intent.getSerializableExtra("descricaoPrato") as? String
