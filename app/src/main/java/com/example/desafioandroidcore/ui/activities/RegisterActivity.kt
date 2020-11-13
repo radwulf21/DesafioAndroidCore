@@ -13,7 +13,7 @@ class RegisterActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar_register)
 
-        btn_register2.setOnClickListener {
+        btn_register.setOnClickListener {
             callHomeActivity()
         }
     }

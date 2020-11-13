@@ -23,8 +23,11 @@
             android:name=".ui.activities.RegisterActivity"
             android:parentActivityName=".ui.activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activities.HomeActivity" />
         <activity
-            android:name=".ui.activities.HomeActivity" />
+            android:name=".ui.activities.CardapioActivity"
+            android:parentActivityName=".ui.activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

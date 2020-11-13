@@ -9,12 +9,27 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.desafioandroidcore.R
 import com.example.desafioandroidcore.domain.Restaurant
 
-class RestaurantsAdapter(private val listRestaurants: ArrayList<Restaurant>): RecyclerView.Adapter<RestaurantsAdapter.RestaurantsViewHolder>() {
-    class RestaurantsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class RestaurantsAdapter(private val listRestaurants: ArrayList<Restaurant>, var listener: OnClickRestaurantListener): RecyclerView.Adapter<RestaurantsAdapter.RestaurantsViewHolder>() {
+    inner class RestaurantsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var iv_restaurant: ImageView = itemView.findViewById(R.id.iv_restaurant)
         var tv_nome_restaurant: TextView = itemView.findViewById(R.id.tv_nome_restaurant)
         var tv_endereço: TextView = itemView.findViewById(R.id.tv_endereço)
         var tv_horario_fechamento: TextView = itemView.findViewById(R.id.tv_horario_fechamento)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onClickRestaurant(position)
+            }
+        }
+    }
+
+    interface OnClickRestaurantListener {
+        fun onClickRestaurant(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantsViewHolder {
